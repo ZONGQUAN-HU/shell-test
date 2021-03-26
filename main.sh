@@ -11,3 +11,11 @@ then
 else
 	echo 用户名或密码错误
 fi
+echo -n -e "1.时间\n2.显示用户名\n3.显示密码\n输入菜单选项："
+read a
+case $a in
+	"1") echo `date`;;
+	"2") echo $name;;
+	"3") echo $passwd;;
+	*) echo 输入不正确;;
+esac
